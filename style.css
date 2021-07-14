@@ -7,7 +7,7 @@
        Fonts
  ------------------- */
 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 
 /* ================================= 
   Base Styles
@@ -21,11 +21,11 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
 	margin: 0;
-    font-family: 'Poppins', sans-serif;
+    
 }
 ul {
   margin: 0;
@@ -46,11 +46,15 @@ h3 {
 	margin-top: 0;
    margin-bottom: 10px;
 }
+
 a {
 	text-decoration: none;
 }
 img {
 	max-width: 100%;
+}
+li{
+    list-style: none;
 }
 /* ================================= 
   Base Layout Styles
@@ -58,18 +62,36 @@ img {
 
 
 /* ---- Navigation ---- */
+.main-nav ul{
+text-align: center;
+
+}
+.main-nav li{
+    padding-left:0;
+}
+.main-nav a{
+    color: white;
+    
+}
+.main-nav a:hover{
+    background-color: rgb(18, 175, 88);
+}
 
 
-/* ---- Layout Containers ---- */
+/* ---- Layout Header ---- */
 .main-header{
     background-color: #2D25A0;
     padding-left: 1em;
+    padding-right: 1em;
 }
 .main-headline{
+   
     margin-bottom:1.875em;
 }
 .headline-name{
+    
     font-size: 2.250em;
+    font-weight: 900;
     line-height: 50px;
     color: #FFFFFF;
     
@@ -96,9 +118,142 @@ button a{
     margin-bottom: 62px;
 }
 
+/* ---- Layout Containers ---- */
+.container{
+
+    margin-top: 48px;
+    margin-left:15px ;
+    margin-right: 15px; 
+}
+.players{
+    width: 330px;
+    background: #FFFFFF;
+box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+
+}
+.thumbnil img{
+    margin-bottom: 16px;
+}
+.player{
+    padding: 15px;
+    margin-bottom: 1.50em;
+}
+.player-name{
+    font-size: 28px;
+}
+.player-description{
+    font-size: 16px;
+}
+aside{
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-------------- footer ------- */
+.footer-logo{
+ 
+    margin-top: 45px;
+margin-bottom: 30px;
+}
+.footer-logo img{
+    width: 150px;
+display: block;
+margin:0 auto;
+}
+.copywright{
+    text-align: center;
+}
+
+
 /* ---- Page Elements ---- */
 
 
 /* ================================= 
   Media Queries
 ==================================== */
+
+/*----------- For-Tablet------------ */
+
+@media (min-width: 769px){
+
+ /*------------- Banner ------------- */
+.banner{
+   display: flex;
+   
+}
+.hero-tile img{
+    width: 556.01px;
+    margin-top: 67px;
+    margin-right: 141px;
+    margin-bottom: 86px;
+    flex-grow: 1;
+}
+.main-headline{
+    margin-top: 121px ;
+    margin-bottom: 170px;
+    margin-left: 150px;
+    margin-right:102px;
+    flex-grow: 1;
+}
+    main{
+ 
+
+    }
+ .container{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-column-gap: 30px;
+     grid-row-gap: 27px;
+     
+ }   
+.player{
+    margin-bottom: 27px;
+}
+ /* ---- Navigation ---- */
+ .main-nav{
+     display: flex;
+     
+ }
+ .main-nav ul{
+     display: flex;
+
+ }
+ .main-nav li{
+    justify-content: space-around;
+ }
+ .login{
+     margin-right: auto;
+     color: white;
+     
+ }
+ .main-nav li a{
+    text-align: center;
+	display: block;
+	padding: 10px 15px;
+ }
+ 
+}
+
+
+    /*------------------- For-DeskTop----------------- */
+
+    @media (min-width: 1025px){
+        main{
+            
+            max-width: 1144px;
+            margin: 0 auto;
+        }
+        .container{
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 30px;
+            
+        }  
+
+        aside{
+            display: flex;
+            flex-grow: 1;
+        }
+    }
