@@ -1,11 +1,6 @@
 /* ================================= 
   Mobile-First Design
-==================================== */
-
-
-/*---------------
-       Fonts
- ------------------- */
+==================================== *
 
 
 
@@ -25,7 +20,8 @@ body {
     font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
-	margin: 0;
+	margin: 0;  
+    overflow-x: hidden;
     
 }
 ul {
@@ -63,6 +59,17 @@ li{
 
 
 /* ---- Navigation ---- */
+.main-nav{
+    padding-top: 30px;
+}
+.logo img{
+    display: block;
+ margin: 0 auto; 
+ margin-bottom: 52px;
+}
+.main-nav ul{
+    display: none;
+}
 .main-nav ul{
 text-align: center;
 
@@ -191,7 +198,7 @@ box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 .product {
     width: 350px;
 }
-/*-------------- footer ------- */
+/*========== footer ========== */
 .footer-logo{
  
     margin-top: 45px;
@@ -239,20 +246,17 @@ color: red;
   Media Queries
 ==================================== */
 
-/*----------- For-Tablet------------ */
+/*=========================
+ For-Tablet
+ ========================= */
 
 @media (min-width: 768px){
-
-    .hero-tile img:hover{
-        
-        transform:rotate(35deg);
-    }
 
 
  /*=========== Button ======== */
 .button1{
     width: 200px;
-   
+   margin-top: 27px;
     border-radius: 5px;
     background-color: #F4F200;
     background-image: #F4F200;
@@ -284,9 +288,7 @@ color: red;
     -webkit-transition: background 300ms ease-in-out;
     transition: background 300ms ease-in-out;
 }
-.button2 a{
-    
-}
+
 .button2:hover{
     background-position: 100%;
     color: #c266d3;
@@ -308,10 +310,14 @@ color: red;
     margin-right: 141px;
     margin-bottom: 86px;
     flex-grow: 1;
+    transition: transform 2s;
+}
+.hero-tile img:hover{
+        
+    transform:rotate(30deg);
+    transition: 0.5s ;
 }
 .main-headline{
-
-    flex-wrap: wrap;
     margin-top: 121px ;
     margin-bottom: 170px;
     margin-left: 102px;
@@ -329,9 +335,7 @@ color: red;
      grid-row-gap: 27px;
      
  }   
-.player{
-    margin-bottom: 27px;
-}
+
 
 
 
@@ -348,7 +352,8 @@ color: red;
  .main-nav li{
     justify-content: space-around;
  }
- .login{
+ .logo{
+     width: 120px;
      margin-right: auto;
      color: white;
      
@@ -378,7 +383,6 @@ margin: 0 auto;
     position: relative;
 }
 .photo img{
-    width: 100%;
     border-radius: 15px;
     overflow: hidden;
   
@@ -401,9 +405,9 @@ margin: 0 auto;
     transition: transform ease 2s;
    
 }
-          /*----------------
-           Merchandis & Product
-           ---------- */
+  /*----------------
+ Merchandis & Product
+ ---------- */
 .merchandise{
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -428,32 +432,31 @@ grid-template-columns: repeat(2, 1fr);
     /*------------------- For-DeskTop----------------- */
 
     @media (min-width: 1025px){
-        .main-headline{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            margin-top: 121px ;
-            margin-bottom: 170px;
-            margin-left: 150px;
-            margin-right:102px;
-            flex-grow: 1;
-        }
-        .banner {
 
-            display: flex;
-            }
+
+ /*============================= Container Layout =========== */
         main{
             
-            max-width: 1144px;
+   max-width: 1144px;
             margin: 0 auto;
         }
-        .container{
+  .container{
 
-            grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 30px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 30px;
+   grid-row-gap: 27px;
+   margin-bottom: 165px;
             
         }  
-
+.main-headline{
+    display: flex;
+    flex-direction: column;
+    margin-top: 121px ;
+    margin-bottom: 170px;
+    margin-left: 156px;
+    margin-right:102px;
+    flex-grow: 1;
+}
 
 /* ---------------aside----------- */
 .club-news{
@@ -461,6 +464,9 @@ grid-template-columns: repeat(2, 1fr);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   
+}
+.news-header{
+    font-size: 2em;
 }
 .photo-frame{
     width: 350px;
