@@ -21,6 +21,7 @@
 	box-sizing: border-box;
 }
 body {
+
     font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
@@ -89,9 +90,9 @@ text-align: center;
     margin-bottom:1.875em;
 }
 .headline-name{
-    
+
     font-size: 2.250em;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 50px;
     color: #FFFFFF;
     
@@ -145,12 +146,51 @@ box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 .player-description{
     font-size: 16px;
 }
-aside{
-    padding: 16px;
-    margin-left: auto;
-    margin-right: auto;
+ /*-------------- aside -------------- */
+
+ .news-header{
+    text-align: center;
+    
+}
+.club-news{
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-row-gap: 15px;
+   grid-column-gap:-100px ;
+   padding: 1em;
+   }
+.photo-frame{
+    width: 160px;
+   
+    overflow: hidden;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+      margin: 0 auto;
+      padding: 5px;
 }
 
+ /*-------------- Product & Merchandise-------------- */
+ .merchandise{
+     text-align: center;
+ }
+.color-name{
+    color: tomato;
+}
+
+ .merchandise-title{
+     font-size: 1.56em;
+     margin-top: 25px;
+     text-align: center;
+ }
+ hr{
+     width: 55px;
+     border-bottom: 2px solid green;
+     margin-bottom: 25px;
+ }
+.product {
+    width: 350px;
+}
 /*-------------- footer ------- */
 .footer-logo{
  
@@ -167,8 +207,33 @@ margin:0 auto;
 }
 
 
-/* ---- Page Elements ---- */
+/*==============Social-Medial ========= */
+.social-nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+.social-nav li{
+    opacity: 0.3;
+}
+.fab{
+    font-size: 1.2em;
+    padding: 0.8em;
+  
+}
 
+.fa-youtube{
+color: red;
+}
+.fa-linkedin, .fa-facebook-square {
+    color: blue;
+}
+.fa-github{
+    color: rgb(3, 187, 243);
+}
+.social-nav li:hover{
+    opacity: 1;
+}
 
 /* ================================= 
   Media Queries
@@ -176,13 +241,67 @@ margin:0 auto;
 
 /*----------- For-Tablet------------ */
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+
+    .hero-tile img:hover{
+        
+        transform:rotate(35deg);
+    }
+
+
+ /*=========== Button ======== */
+.button1{
+    width: 200px;
+   
+    border-radius: 5px;
+    background-color: #F4F200;
+    background-image: #F4F200;
+    background-image: -moz-linear-gradient(top, #fff 0%, #F4F200 100%); 
+    background-image: -webkit-linear-gradient(top, #fff 0%,#F4F200 100%); 
+    background-image: linear-gradient(to bottom, #fff 0%,#F4F200 100%); 
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+.button1 a{
+    color: black;
+}
+.button1:hover{
+    background-position: -200%;
+    transition: background 300ms ease-in-out;
+}
+
+.button2{
+    color: #fff;
+    
+    background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+.button2 a{
+    
+}
+.button2:hover{
+    background-position: 100%;
+    color: #c266d3;
+}
+
+
+
+
 
  /*------------- Banner ------------- */
 .banner{
-   display: flex;
+    display: flex;
    
 }
+
 .hero-tile img{
     width: 556.01px;
     margin-top: 67px;
@@ -191,9 +310,11 @@ margin:0 auto;
     flex-grow: 1;
 }
 .main-headline{
+
+    flex-wrap: wrap;
     margin-top: 121px ;
     margin-bottom: 170px;
-    margin-left: 150px;
+    margin-left: 102px;
     margin-right:102px;
     flex-grow: 1;
 }
@@ -211,6 +332,10 @@ margin:0 auto;
 .player{
     margin-bottom: 27px;
 }
+
+
+
+
  /* ---- Navigation ---- */
  .main-nav{
      display: flex;
@@ -233,13 +358,90 @@ margin:0 auto;
 	display: block;
 	padding: 10px 15px;
  }
- 
+ /* ---------------aside----------- */
+ aside{
+     width: 90%;
+margin: 0 auto;
+ }
+ .club-news{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
 }
-
-
+.photo-frame{
+    width: 350px;
+   
+    border: 3px solid rebeccapurple;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+}
+.photo img{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  
+}
+.phot-detailed{
+    display: none;
+    position: absolute;
+    width: 350px;
+    text-align: center;
+    top: 0;
+    color: white;
+}
+.photo-frame:hover .phot-detailed{
+    display: block;
+    background-color: rgba(250, 128, 114, 0.411);
+    
+}
+.photo-frame:hover img{
+    transform: scale(0.7) ;
+    transition: transform ease 2s;
+   
+}
+          /*----------------
+           Merchandis & Product
+           ---------- */
+.merchandise{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+   /*=============
+    social-Media
+    =========== */
+    .footer-logo img{
+        width: 483px;
+        margin-bottom: 20px;
+    }
+ .social-nav ul{
+     margin-bottom: 20px;
+ }
+ .copywright{
+     margin-top: 0;
+     margin-bottom: 63px;
+ }
+}
+ 
+ 
     /*------------------- For-DeskTop----------------- */
 
     @media (min-width: 1025px){
+        .main-headline{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 121px ;
+            margin-bottom: 170px;
+            margin-left: 150px;
+            margin-right:102px;
+            flex-grow: 1;
+        }
+        .banner {
+
+            display: flex;
+            }
         main{
             
             max-width: 1144px;
@@ -252,8 +454,23 @@ margin:0 auto;
             
         }  
 
-        aside{
-            display: flex;
-            flex-grow: 1;
-        }
+
+/* ---------------aside----------- */
+.club-news{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+}
+.photo-frame{
+    width: 350px;
     }
+          /*----------------
+           Merchandis & Product
+           ---------- */
+           .merchandise{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            }
+            
+}
